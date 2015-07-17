@@ -45,14 +45,13 @@
 <p>The code that is here in this repository has the following features, among many others:</p>
 
 <ul>
-<li><p>CNNs with easy architecture management. You can create any architecture you want with just changes of small parameters in the boiler plate. </p></li>
-<li><p>Dropouts[1]</p></li>
+<li>CNNs with easy architecture management. You can create any architecture you want with just changes of small parameters in the boiler plate. </li>
+<li>Dropouts[1]</li>
 <li>adaGrad[2]</li>
 <li>Polyak Momentum[3]</li>
-<li><p>Data handling capabilities.
-Also provided a wrapper to <a href="https://jaberg.github.io/skdata/">skdata's dataset</a> interface (under construction, as of now, I have cifar10, mnist, extended mnists , caltech101). </p></li>
-<li><p>[new] Data visualization capabilities.
-Visualize the activities of select images (random) from the trainset on each layer after select number of epochs of training. Also view filters after select number of epochs. If the input images are color, the first layer saves down color features. </p></li>
+<li>Data handling capabilities.</li>
+<li>Also provided a wrapper to <a href="https://jaberg.github.io/skdata/">skdata's dataset</a> interface (under construction, as of now, I have cifar10, mnist, extended mnists , caltech101). </li>
+<li>[new] Data visualization capabilities: Visualize the activities of select images (random) from the trainset on each layer after select number of epochs of training. Also view filters after select number of epochs. If the input images are color, the first layer saves down color features. </li>
 </ul>
 
 <p>More features will be added as and when I am implementing them. You can check the <code>to_do.txt</code> in the repository for expected updates. </p>
@@ -63,21 +62,29 @@ Visualize the activities of select images (random) from the trainset on each lay
 <a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
 
 <p>Running this code essentially requires:
-    1. python 2.x
-    2. theano 0.6 +<br>
-    3. numpy<br>
-    4. scipy
-    5. skdata
-    6. cPickle
-    7. opencv (cv2) 
-    8. gzip</p>
+    1. <code>python 2.x</code></p>
+
+<pre><code>2. `theano 0.6 +`    
+
+3. `numpy` 
+
+4. `scipy`
+
+5. `skdata`
+
+6. `cPickle`
+
+7. `opencv (cv2)` 
+
+8. `gzip`
+</code></pre>
 
 <p>Most of these could be installed by installing <a href="http://docs.continuum.io/anaconda/install.html">anaconda of continuum analytics</a> The code is reasonably well documented. It is not that difficult to find out from the boilerplate what is happening. If you need to understand really well what is happening before you jump into the code, use <code>verbose = True flag</code> in the boiler plate. The code has been tested on exhaustively in both MacOSX and Linux Ubuntu 14.x and 15.x by virtue of constant use. </p>
 
 <hr>
 
-<h1>
-<a id="who-is-this-code-most-useful-for-" class="anchor" href="#who-is-this-code-most-useful-for-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Who is this code most useful for ?</h1>
+<h2>
+<a id="who-is-this-code-most-useful-for-" class="anchor" href="#who-is-this-code-most-useful-for-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Who is this code most useful for ?</h2>
 
 <p>I wrote this code essentially for my labmates, those who are interested in starting deep learning to make a fast transition into theano. I reckon that this will be useful for someone who is starting out to be a grad student getting to start research into deep learning (like me) or to someone who wants to do a try out on some kaggle challenge. Parts of the code are directly lifted from <a href="http://deeplearning.net/software/theano/tutorial/">theano tutorials</a> or from <a href="https://github.com/mdenil">Misha Denil's repository</a>. </p>
 
@@ -85,16 +92,16 @@ Visualize the activities of select images (random) from the trainset on each lay
 
 <hr>
 
-<h3>
-<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h3>
+<h1>
+<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h1>
 
-<p>[1]   Srivastava, Nitish, et al. "Dropout: A simple way to prevent neural networks from overfitting." The Journal of Machine Learning Research 15.1 (2014): 1929-1958.</p>
+<p><code>[1]   Srivastava, Nitish, et al. "Dropout: A simple way to prevent neural networks from overfitting." The Journal of Machine Learning Research 15.1 (2014): 1929-1958.</code></p>
 
-<p>[2]   John Duchi, Elad Hazan, and Yoram Singer. 2011. Adaptive subgradient methods for online learning and stochastic optimization. JMLR</p>
+<p><code>[2]   John Duchi, Elad Hazan, and Yoram Singer. 2011. Adaptive subgradient methods for online learning and stochastic optimization. JMLR</code></p>
 
-<p>[3]   Polyak, Boris Teodorovich. "Some methods of speeding up the convergence of iteration methods." USSR Computational Mathematics and Mathematical Physics 4.5 (1964): 1-17. Implementation was adapted from Sutskever, Ilya, et al. "On the importance of initialization and momentum in deep learning." Proceedings of the 30th international conference on machine learning (ICML-13). 2013.</p>
+<p><code>[3]   Polyak, Boris Teodorovich. "Some methods of speeding up the convergence of iteration methods." USSR Computational Mathematics and Mathematical Physics 4.5 (1964): 1-17. Implementation was adapted from Sutskever, Ilya, et al. "On the importance of initialization and momentum in deep learning." Proceedings of the 30th international conference on machine learning (ICML-13). 2013.</code></p>
 
-<p>[4]   Nesterov, Yurii. "A method of solving a convex programming problem with convergence rate O (1/k2)."   Soviet Mathematics Doklady. Vol. 27. No. 2. 1983. Adapted from <a href="https://blogs.princeton.edu/imabandit/2013/04/01/acceleratedgradientdescent/">https://blogs.princeton.edu/imabandit/2013/04/01/acceleratedgradientdescent/</a></p>
+<p><code>[4]   Nesterov, Yurii. "A method of solving a convex programming problem with convergence rate O (1/k2)."   Soviet Mathematics Doklady. Vol. 27. No. 2. 1983.</code> Adapted from <a href="https://blogs.princeton.edu/imabandit/2013/04/01/acceleratedgradientdescent/">Sebastien Bubeck's</a>blog.</p>
 
 <hr>
 
