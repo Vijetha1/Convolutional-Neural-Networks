@@ -29,29 +29,77 @@
       </header>
       <section>
         <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<a id="convolutional-neural-networks" class="anchor" href="#convolutional-neural-networks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Convolutional Neural Networks:</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>, select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you're using GitHub for Mac or GitHub for Windows, simply sync your repository and you'll see the new branch.</p>
+<p>This is a CNN implementaion in <a href="http://deeplearning.net/software/theano/">theano</a> with many modern day upgrades features such as dropouts[1], adagrad[2], momentum[3], max-margin layer and access to many datasets through <a href="https://jaberg.github.io/skdata/">skdata</a>. If you're a beginner in neural networks and deep learning as I was five months ago, you would find yourself overwhelmed with literature and materials. After spending a long time, based on your needs, you will end up deciding to use among many software, <a href="http://deeplearning.net/software/theano/">theano</a> . <a href="http://deeplearning.net/software/theano/">Theano</a> is a beautiful environment for it provides you gradients automatically. Its a symbolic language. IT IS NOT A DEEP LEARNING TOOLBOX. It is hard to get around, particularly, if like me you are also new to python and to symbolic programming in general. </p>
 
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<p>You'll probably begin by following the <a href="http://nbviewer.ipython.org/github/craffel/theano-tutorial/blob/master/Theano%20Tutorial.ipynb">Caffe CNN tutorials</a> <a href="http://www.iro.umontreal.ca/%7Elisa/pointeurs/tutorial_hpcs2011_fixed.pdf">Lisa lab's tutorial</a> or the <a href="http://deeplearning.net/software/theano/tutorial/index.html#tutorial">theano tutorial</a> itself.</p>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
+<p>Once you are done with the tutorials (and that takes about a couple of months to get everything going), while even though you may feel a little confident, you'll find that to stand up to the state-of-the-art, you need to implement SVM layers, All kinds of activation functions, dropout[1], classical momentum[3], accelerated gradients[4], adaptive gradient descent, AdaGrad[2] and all these before you can start your research.  </p>
 
-<h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating pages manually</h3>
+<hr>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<h1>
+<a id="in-this-repository" class="anchor" href="#in-this-repository" aria-hidden="true"><span class="octicon octicon-link"></span></a>In this repository</h1>
 
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<p>The code that is here in this repository has the following features, among many others:</p>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<ul>
+<li><p>CNNs with easy architecture management. You can create any architecture you want with just changes of small parameters in the boiler plate. </p></li>
+<li>
+<p>Dropouts[1] </p>
 
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<p>[1] Srivastava, Nitish, et al. "Dropout: A simple way to prevent neural networks
+from overfitting." The Journal of Machine Learning Research 15.1 (2014): 1929-1958.</p>
+</li>
+<li>
+<p>adaGrad[2]</p>
 
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
+<p>John Duchi, Elad Hazan, and Yoram Singer. 2011. Adaptive subgradient methods
+for online learning and stochastic optimization. JMLR</p>
+</li>
+<li>
+<p>Polyak Momentum[3]</p>
+
+<p>[3]Polyak, Boris Teodorovich. "Some methods of speeding up the convergence of iteration methods." 
+USSR Computational Mathematics and Mathematical Physics 4.5 (1964): 1-17. Implementation was adapted from Sutskever, Ilya, et al. "On the importance of initialization and momentum in deep learning." Proceedings of the 30th international conference on machine learning (ICML-13). 2013.</p>
+</li>
+<li><p>Data handling capabilities.
+Also provided a wrapper to <a href="https://jaberg.github.io/skdata/">skdata's dataset</a> interface (under construction, as of now, I have cifar10, mnist, extended mnists , caltech101). </p></li>
+<li><p>[new] Data visualization capabilities.
+Visualize the activities of select images (random) from the trainset on each layer after select number of epochs of training. Also view filters after select number of epochs. If the input images are color, the first layer saves down color features. </p></li>
+</ul>
+
+<p>More features will be added as and when I am implementing them. You can check the <code>to_do.txt</code> in the repository for expected updates. </p>
+
+<hr>
+
+<h1>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements:</h1>
+
+<p>Running this code essentially requires:
+    1. python 2.x
+    2. theano 0.6 +<br>
+    3. numpy<br>
+    4. scipy
+    5. skdata
+    6. cPickle
+    7. opencv (cv2) 
+    8. gzip</p>
+
+<p>Most of these could be installed by installing <a href="http://docs.continuum.io/anaconda/install.html">anaconda of continuum analytics</a> The code is reasonably well documented. It is not that difficult to find out from the boilerplate what is happening. If you need to understand really well what is happening before you jump into the code, use <code>verbose = True flag</code> in the boiler plate. The code has been tested on exhaustively in both MacOSX and Linux Ubuntu 14.x and 15.x by virtue of constant use. </p>
+
+<hr>
+
+<h1>
+<a id="who-is-this-code-most-useful-for-" class="anchor" href="#who-is-this-code-most-useful-for-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Who is this code most useful for ?</h1>
+
+<p>I wrote this code essentially for my labmates, those who are interested in starting deep learning to make a fast transition into theano. I reckon that this will be useful for someone who is starting out to be a grad student getting to start research into deep learning (like me) or to someone who wants to do a try out on some kaggle challenge. Parts of the code are directly lifted from <a href="http://deeplearning.net/software/theano/tutorial/">theano tutorials</a> or from <a href="https://github.com/mdenil">Misha Denil's repository</a>. </p>
+
+<p>This might not be really useful for advanced deep learning researchers. It's quite basic. If you are a serious researcher and you either find a bug or you want to just make suggestions please feel free, I will be grateful.  </p>
+
+<p>Thanks for using the code, hope you had fun.
+Ragav Venkatesan</p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/ragavvenkatesan">ragavvenkatesan</a></p>
