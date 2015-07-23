@@ -61,7 +61,8 @@
 </li>
 <li><p>Data handling capabilities: I have provided features to setup data as simple matlab files that can be loaded in python and run in batches for training. Alternatively, I also have options for ‘pkl.gz’ files if you would like to cPickle and / or zip your data. Also provided a wrapper to <a href="https://jaberg.github.io/skdata/">skdata's dataset</a> interface (under construction, as of now, I have cifar10, mnist, extended mnists , caltech101). </p></li>
 <li><p>Data visualization capabilities: Visualize the activities of select images (random) from the trainset on each layer after select number of epochs of training. Also view filters after select number of epochs. If the input images are color, the first layer saves down color features. The only way to know if a networks is trained or not is by constantly visualizing the filters. I have provided ways to save down the filters and activations after every ( optionally after how many ever ) epochs and probe into the weights of the networks. </p></li>
-<li><p>[new] Entire network can be saved and reloaded.</p></li>
+<li><p>Entire network can be saved and reloaded.</p></li>
+<li>Save down a trained network, load it at a later time and just run testing. This is useful when testing large models or wanting to save down various models and compare at a later time. </li>
 </ul>
 
 <p>More features will be added as and when I am implementing them. You can check the <code>to_do.txt</code> in the repository for expected updates.  I will add more detailed description of the implementation as and when I have time to so. But don't expect it soon.</p>
