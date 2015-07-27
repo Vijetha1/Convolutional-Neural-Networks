@@ -100,7 +100,7 @@
 <hr>
 
 <h2>
-<a id="how-to-run-the-code-" class="anchor" href="#how-to-run-the-code-" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to run the code ?</h2>
+<a id="how-to-run-the-main-code-lenetpy-" class="anchor" href="#how-to-run-the-main-code-lenetpy-" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to run the main code (lenet.py) ?</h2>
 
 <p>I am not going to explain the details of the code explicitly. If you are in a position to want to change, probably this code is already too easy and obvious for you to understand and make these changes. If there are particular queries, raise an issue and I would love to respond. I would just explain the input parameters that help in running and also what to expect out of the output once ran. </p>
 
@@ -194,6 +194,11 @@
 </ul>
 
 <p>Using only these features one must be able to run some sophisticated network designs. </p>
+
+<h3>
+<a id="how-to-run-the-test-only-code-test_saved_netpy-" class="anchor" href="#how-to-run-the-test-only-code-test_saved_netpy-" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to run the test only code (test_saved_net.py) ?</h3>
+
+<p>Assuming that you have run the above code once, its fully trained and that you have saved the network down using the utility provided in util.py, you may run the test_saved_net.py on some new (or the same dataset to demonstrate) by supplying the saved file in <code>load_file_name</code> variable. Do remember though that the input image sizes have to match as the exact same architecture of the network that was saved will be reconstructed. This is useful to verify stability of learnt network under noise and such by training on a clean dataset and testing on a noisy dataset. </p>
 
 <hr>
 
